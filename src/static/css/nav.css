@@ -1,0 +1,726 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins');
+
+:root {
+    --main-color  : #4CB8C4;
+    --round       : 50%;
+    --simple-rd   : 10px;
+    --dur         : .3s;
+    --color-dark  : #2f2f2f;
+    --color-light : #fff;
+    --btn-width   : 3rem;
+    --lightblue   : #3D9DEA;
+    --colordanger : red;
+    --colorsuccess: #82CA9C;
+    --neuro       : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: var(--simple-rd);
+    border-radius        : var(--simple-rd);
+    background           : #ddd;
+}
+
+a {
+    color          : var(--color-light);
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+nav {
+    background: var(--main-color);
+    padding   : 1rem 1rem 10px 1rem;
+    position  : fixed;
+    z-index   : 100;
+    width     : 100%;
+}
+
+.links {
+    display: inline;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    margin-top: -0.5rem;
+    height    : 3rem;
+    width     : 5rem;
+}
+
+.logo h1 {
+    margin-top: 5px;
+    font-size : 1.2rem;
+    color     : orangered;
+}
+
+.logo h1 span {
+    color: green;
+}
+
+.links ul {
+    display     : flex;
+    float       : right;
+    margin-top  : -2.5rem;
+    margin-right: -1rem;
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton {
+    position: relative;
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton svg {
+    color: var(--main-color);
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton {
+    width        : 33px;
+    height       : 33px;
+    border-radius: var(--round);
+}
+
+.neurobutton {
+    background     : var(--color-light);
+    display        : flex;
+    margin-top     : -5px;
+    justify-content: center;
+    align-items    : center;
+    box-shadow     : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+    cursor         : pointer;
+}
+
+.links .active svg {
+    color: #000;
+}
+
+.search {
+    top: 20px;
+    margin-top: -3px;
+}
+
+.links ul li {
+    list-style  : none;
+    margin-right: 2rem;
+    margin-top  : -1px;
+}
+
+.links ul li img {
+    height       : 2rem;
+    widows       : 2rem;
+    margin-top   : -5px;
+    border-radius: var(--round);
+    object-fit   : cover;
+    cursor: pointer;
+}
+
+.links ul li a i {
+    font-size : 1.2rem;
+    color     : #fff;
+    padding   : 5px;
+    margin-top: -1px;
+}
+
+.link_active {
+    text-decoration: underline;
+}
+
+.search form input {
+    outline: none;
+}
+
+.search form i {
+    position   : absolute;
+    color      : var(--main-color);
+    margin-top : 8px;
+    margin-left: 10px;
+}
+
+.search form input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family       : inherit;
+    font-size         : 10px;
+    height            : 10px;
+    box-shadow        : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search form input::-webkit-search-decoration,
+.search form input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+.search form input[type=search] {
+    background: #fff no-repeat 9px center;
+    border    : solid 1px #ccc;
+    padding   : 9px 10px 9px 32px;
+    width     : 55px;
+
+    -webkit-border-radius: 10em;
+    -moz-border-radius   : 10em;
+    border-radius        : 10em;
+
+    -webkit-transition: all .5s;
+    -moz-transition   : all .5s;
+    transition        : all .5s;
+}
+
+.search form input[type=search]:focus {
+    width           : 130px;
+    background-color: #fff;
+    border-color    : #66CC75;
+}
+
+
+nav {
+    background: var(--main-color);
+    padding   : 1rem 1rem 10px 1rem;
+    position  : fixed;
+    z-index   : 100;
+    width     : 100%;
+}
+
+.links {
+    display: inline;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    margin-top: -0.5rem;
+    height    : 3rem;
+    width     : 5rem;
+}
+
+.logo h1 {
+    margin-top: 5px;
+    font-size : 1.2rem;
+    color     : orangered;
+}
+
+.logo h1 span {
+    color: green;
+}
+
+.links ul {
+    display     : flex;
+    float       : right;
+    margin-top  : -2.5rem;
+    margin-right: -1rem; 
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton {
+    position: relative;
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton svg {
+    color: var(--main-color);
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton {
+    width        : 33px;
+    height       : 33px;
+    border-radius: var(--round);
+}
+
+.neurobutton {
+    background     : var(--color-light);
+    display        : flex;
+    margin-top     : -5px;
+    justify-content: center;
+    align-items    : center;
+    box-shadow     : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+    cursor         : pointer;
+}
+
+.links .active svg {
+    color: #000;
+}
+
+.search {
+    margin-top: -3px;
+}
+
+.links ul li {
+    list-style  : none;
+    margin-right: 2rem;
+    margin-top  : -1px;
+}
+
+.links ul li img {
+    height       : 2rem;
+    widows       : 2rem;
+    margin-top   : -5px;
+    border-radius: var(--round);
+    object-fit   : cover;
+}
+
+.links ul li a i {
+    font-size : 1.2rem;
+    color     : #fff;
+    padding   : 5px;
+    margin-top: -1px;
+}
+
+.link_active {
+    text-decoration: underline;
+}
+
+.search form input {
+    outline: none;
+}
+
+.search form i {
+    position   : absolute;
+    color      : var(--main-color);
+    margin-top : 8px;
+    margin-left: 10px;
+}
+
+.search form input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family       : inherit;
+    font-size         : 10px;
+    height            : 10px;
+    box-shadow        : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search form input::-webkit-search-decoration,
+.search form input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+.search form input[type=search] {
+    background: #fff no-repeat 9px center;
+    border    : solid 1px #ccc;
+    padding   : 9px 10px 9px 32px;
+    width     : 55px;
+
+    -webkit-border-radius: 10em;
+    -moz-border-radius   : 10em;
+    border-radius        : 10em;
+
+    -webkit-transition: all .5s;
+    -moz-transition   : all .5s;
+    transition        : all .5s;
+}
+
+.search form input[type=search]:focus {
+    width           : 130px;
+    background-color: #fff;
+    border-color    : #66CC75;
+}
+
+
+
+.side_nav ul {
+    display       : flex;
+    width         : 100%;
+    background    : var(--main-color);
+    padding-bottom: 10px;
+}
+
+.side_nav ul li {
+    list-style  : none;
+    margin-right: 1rem;
+    font-size   : 14px;
+    cursor      : pointer;
+}
+
+.side_nav ul li span {
+    cursor: pointer;
+}
+
+.side_nav ul li span p {
+    display    : inline;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+#time {
+    color      : lightcoral;
+    margin-left: 1rem;
+}
+
+.sidenav {
+    height          : 100%;
+    width           : 0;
+    position        : fixed;
+    z-index         : 100;
+    top             : 0;
+    left            : 0;
+    background-color: var(--main-color);
+    overflow-x      : hidden;
+    padding-top     : 60px;
+    transition      : 0.5s;
+}
+
+.sidenav a {
+    padding        : 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size      : 14px;
+    color          : #dfdfdf;
+    display        : block;
+    transition     : 0.3s;
+}
+
+.sidenav label {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position   : absolute;
+    top        : 0;
+    right      : 25px;
+    font-size  : 36px;
+    margin-left: 50px;
+}
+
+.side_nav ul {
+    display       : flex;
+    width         : 100%;
+    background    : var(--main-color);
+    padding-bottom: 10px;
+}
+
+.side_nav ul li {
+    list-style  : none;
+    margin-right: 1rem;
+    font-size   : 14px;
+    cursor      : pointer;
+}
+
+.side_nav ul li span {
+    cursor: pointer;
+}
+
+.side_nav ul li span p {
+    color: white;
+    display    : inline;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+.fa-bars:before{
+    color: white;
+}
+#time {
+    color      : lightcoral;
+    margin-left: 1rem;
+}
+
+.sidenav {
+    height          : 100%;
+    width           : 0;
+    position        : fixed;
+    z-index         : 100;
+    top             : 0;
+    left            : 0;
+    background-color: var(--main-color);
+    overflow-x      : hidden;
+    padding-top     : 60px;
+    transition      : 0.5s;
+}
+
+.sidenav a {
+    padding        : 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size      : 14px;
+    color          : #fff;
+    display        : block;
+    transition     : 0.3s;
+}
+
+.sidenav label {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position   : absolute;
+    top        : 0;
+    right      : 25px;
+    font-size  : 36px;
+    margin-left: 50px;
+}
+
+nav {
+    background: var(--main-color);
+    padding   : 1rem 1rem 10px 1rem;
+    position  : fixed;
+    z-index   : 100;
+    width     : 100%;
+}
+
+.links {
+    display: inline;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    margin-top: -0.5rem;
+    height    : 3rem;
+    width     : 5rem;
+}
+
+.logo h1 {
+    margin-top: 5px;
+    font-size : 1.2rem;
+    color     : orangered;
+}
+
+.logo h1 span {
+    color: green;
+}
+
+.links ul {
+    display     : flex;
+    float       : right;
+    margin-top  : -2.5rem;
+    margin-right: -1rem;
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton {
+    position: relative;
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton svg {
+    color: var(--main-color);
+}
+
+.cartbutton,
+.homebutton,
+.orderbutton {
+    width        : 33px;
+    height       : 33px;
+    border-radius: var(--round);
+}
+
+.neurobutton {
+    background     : var(--color-light);
+    display        : flex;
+    margin-top     : -5px;
+    justify-content: center;
+    align-items    : center;
+    box-shadow     : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+    cursor         : pointer;
+}
+
+.links .active svg {
+    color: #000;
+}
+
+.search {
+    margin-top: -3px;
+}
+
+.links ul li {
+    list-style  : none;
+    margin-right: 2rem;
+    margin-top  : -1px;
+}
+
+.links ul li img {
+    height       : 2rem;
+    widows       : 2rem;
+    margin-top   : -5px;
+    border-radius: var(--round);
+    object-fit   : cover;
+}
+
+.links ul li a i {
+    font-size : 1.2rem;
+    color     : #fff;
+    padding   : 5px;
+    margin-top: -1px;
+}
+
+.link_active {
+    text-decoration: underline;
+}
+
+.search form input {
+    outline: none;
+}
+
+.search form i {
+    position   : absolute;
+    color      : var(--main-color);
+    margin-top : 8px;
+    margin-left: 10px;
+}
+
+.search form input[type=search] {
+    -webkit-appearance: textfield;
+    -webkit-box-sizing: content-box;
+    font-family       : inherit;
+    font-size         : 10px;
+    height            : 10px;
+    box-shadow        : inset 3px 4px 5px 0px rgba(197, 197, 197, 0.1), inset 3px 6px 6px 5px rgba(78, 77, 77, 0.1), -2px -2px 8px 2px rgba(255, 255, 255, 0.1), 2px 2px 6px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search form input::-webkit-search-decoration,
+.search form input::-webkit-search-cancel-button {
+    display: none;
+}
+
+
+.search form input[type=search] {
+    background: #fff no-repeat 9px center;
+    border    : solid 1px #ccc;
+    padding   : 9px 10px 9px 32px;
+    width     : 55px;
+
+    -webkit-border-radius: 10em;
+    -moz-border-radius   : 10em;
+    border-radius        : 10em;
+
+    -webkit-transition: all .5s;
+    -moz-transition   : all .5s;
+    transition        : all .5s;
+}
+
+.search form input[type=search]:focus {
+    width           : 130px;
+    background-color: #fff;
+    border-color    : #66CC75;
+}
+
+
+
+.side_nav ul {
+    display       : flex;
+    width         : 100%;
+    background    : var(--main-color);
+    padding-bottom: 10px;
+}
+
+.side_nav ul li {
+    list-style  : none;
+    margin-right: 1rem;
+    font-size   : 14px;
+    cursor      : pointer;
+}
+
+.side_nav ul li span {
+    cursor: pointer;
+}
+
+.side_nav ul li span p {
+    display    : inline;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+}
+
+#time {
+    color      : lightcoral;
+    margin-left: 1rem;
+}
+
+.sidenav {
+    height          : 100%;
+    width           : 0;
+    position        : fixed;
+    z-index         : 100;
+    top             : 0;
+    left            : 0;
+    background-color: var(--main-color);
+    overflow-x      : hidden;
+    padding-top     : 60px;
+    transition      : 0.5s;
+}
+
+.sidenav a {
+    padding        : 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size      : 14px;
+    color          : #dfdfdf;
+    display        : block;
+    transition     : 0.3s;
+}
+
+.sidenav label {
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position   : absolute;
+    top        : 0;
+    right      : 25px;
+    font-size  : 36px;
+    margin-left: 50px;
+}
+#sup{
+    position: absolute;
+    color: var(--color-dark);
+    font-weight: 600;
+    font-size: 12px;
+    top: 3px;
+    right: 2px;
+}
+@keyframes load {
+    from {
+        left: -100%;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+#recaptcha-container{
+    display: none;
+}
